@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report lang="fr" week="2026-06-22">
+  <meta>
+    <title>THE AI AGENTS TIMES | 22 Juin 2026</title>
+    <theme css="templates/default/journal-theme.css"/>
+  </meta>
+
+  <masthead>
+    <metaLeft>Vol. I — N° 1</metaLeft>
+    <metaCenter>Édition Hebdomadaire des Agents IA</metaCenter>
+    <metaRight>Lundi 22 Juin 2026 — Gratuit</metaRight>
+    <title>The AI Agents Times</title>
+    <subtitle>Le Quotidien de la Révolution Agentique — The Daily of the Agentic Revolution</subtitle>
+    <heroImage
+      src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600"
+      alt="Image décorative de couverture"
+      caption="Image décorative sans lien éditorial. Source: Pexels (banque d'images libres)."
+      licenseUrl="https://www.pexels.com/license/"
+      licenseLabel="(Licence Pexels)"/>
+  </masthead>
+
+  <sections>
+    <section id="summary" header="break" title-fr="Résumé Exécutif" title-en="Executive Summary">
+      <bilingual>
+        <column label="Français">
+          <paragraph dropcap="true">La semaine du 15 au 22 juin 2026 a marqué une accélération significative dans l'adoption des agents IA en entreprise. Les principaux développements incluent le lancement par Microsoft de la catégorie Autopilots dans son écosystème 365/Azure, l'introduction par Google de capacités avancées de planification multi-agents avec une amélioration de 34 % de la précision RAG, et l'émergence de modules de gouvernance autonome intégrant l'IA explicable et le suivi de conformité en temps réel.</paragraph>
+          <paragraph>Les statistiques montrent que moins de 10 % des entreprises ont réussi à passer à l'échelle avec les agents IA, soulignant l'importance de la gouvernance et de l'intégration avec les outils existants.</paragraph>
+        </column>
+        <column label="English">
+          <paragraph dropcap="true">The week of June 15–22, 2026 saw significant acceleration in enterprise AI agent adoption. Key developments include Microsoft's launch of the Autopilots category in its 365/Azure ecosystem, Google's introduction of advanced multi-agent planning capabilities with a 34% improvement in RAG accuracy, and the emergence of autonomous governance modules combining explainable AI with real-time compliance monitoring.</paragraph>
+          <paragraph>Statistics show that fewer than 10% of enterprises have successfully scaled AI agents, highlighting the importance of governance and integration with existing tools.</paragraph>
+        </column>
+      </bilingual>
+    </section>
+
+    <section id="launches" title-fr="Lancements Récents" title-en="Recent Launches">
+      <columns>
+        <column span="1">
+          <article>
+            <kicker>Plateformes</kicker>
+            <headline>Microsoft Autopilots</headline>
+            <image
+              src="https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200"
+              alt="Image décorative d'illustration"
+              caption="Image décorative sans lien avec l'article. Source: Pexels (banque d'images libres)."
+              licenseUrl="https://www.pexels.com/license/"
+              licenseLabel="(Licence Pexels)"/>
+            <fr-en>
+              <fr>Nouvelle catégorie d'agents introduite dans l'écosystème Microsoft 365 et Azure en juin 2026. Conçus pour automatiser des workflows complets au sein des outils Microsoft existants.</fr>
+              <en>New agent category introduced in Microsoft 365 and Azure ecosystem in June 2026. Designed to automate complete workflows within existing Microsoft tools.</en>
+            </fr-en>
+            <source href="https://www.vybe.build/blog/best-ai-agent-platforms-2026" label="Vybe Blog"/>
+          </article>
+        </column>
+        <column span="1">
+          <article>
+            <kicker>Recherche</kicker>
+            <headline>Google Multi-Agent Planning</headline>
+            <image
+              src="https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200"
+              alt="Image décorative d'illustration"
+              caption="Image décorative sans lien avec l'article. Source: Pexels (banque d'images libres)."
+              licenseUrl="https://www.pexels.com/license/"
+              licenseLabel="(Licence Pexels)"/>
+            <fr-en>
+              <fr>Amélioration de 34 % de la précision RAG grâce à de nouvelles capacités de planification et de routage multi-agents. Migration forcée vers Gemini 3.5 Flash pour les administrateurs d'entreprise le 9 juin 2026.</fr>
+              <en>34% improvement in RAG accuracy through new multi-agent planning and routing capabilities. Forced migration to Gemini 3.5 Flash for enterprise administrators on June 9, 2026.</en>
+            </fr-en>
+            <source href="https://www.vybe.build/blog/best-ai-agent-platforms-2026" label="Vybe Blog"/>
+            <quote>Moins de 10 % des entreprises ont réussi à passer à l'échelle avec les agents IA.</quote>
+          </article>
+        </column>
+        <column span="1">
+          <article>
+            <kicker>Outils</kicker>
+            <headline>Google Antigravity &amp; Perplexity Computer</headline>
+            <fr-en>
+              <fr>Plateforme agent-first et orchestration multi-modèles pour des tâches complexes.</fr>
+              <en>Agent-first development platform and multi-model orchestration for complex tasks.</en>
+            </fr-en>
+            <source href="https://www.datacamp.com/blog/best-ai-agents" label="DataCamp"/>
+            <box title-fr="Chiffre clé" title-en="Key Figure">
+              <fr-en>
+                <fr>50 % des éditeurs ERP lanceront des modules de gouvernance autonome en 2026.</fr>
+                <en>50% of ERP vendors will launch autonomous governance modules in 2026.</en>
+              </fr-en>
+              <source href="https://paul-okhrem.com/enterprise-ai-agents-statistics-2026/" label="Forrester via Paul Okhrem"/>
+            </box>
+          </article>
+        </column>
+      </columns>
+    </section>
+
+    <section id="papers" title-fr="Articles de Recherche" title-en="Research Papers">
+      <columns>
+        <column span="1">
+          <article>
+            <kicker>arXiv:2606.05608v1</kicker>
+            <headline>The End of Software Engineering</headline>
+            <image
+              src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200"
+              alt="Image décorative d'illustration"
+              caption="Image décorative sans lien avec l'article. Source: Pexels (banque d'images libres)."
+              licenseUrl="https://www.pexels.com/license/"
+              licenseLabel="(Licence Pexels)"/>
+            <fr-en>
+              <fr>Décrit comment même les modèles de 7 B paramètres peuvent résoudre 18,20 % des tâches d'ingénierie logicielle automatisée. Étude pilote sur des essaims d'agents coordonnés dans 20+ workflows de débogage.</fr>
+              <en>Describes how even 7B parameter models can solve 18.20% of automated software engineering tasks. Pilot study on coordinated agent swarms across 20+ debugging workflows.</en>
+            </fr-en>
+            <source href="https://arxiv.org/html/2606.05608v1" label="arXiv"/>
+          </article>
+        </column>
+        <column span="1">
+          <article>
+            <kicker>arXiv:2602.17753v1</kicker>
+            <headline>The 2025 AI Agent Index</headline>
+            <fr-en>
+              <fr>Index complet des systèmes d'IA agentique déployés, documentant leurs caractéristiques techniques et de sécurité.</fr>
+              <en>Comprehensive index of deployed agentic AI systems, documenting their technical and safety features.</en>
+            </fr-en>
+            <source href="https://arxiv.org/html/2602.17753v1" label="arXiv"/>
+          </article>
+        </column>
+        <column span="1">
+          <article>
+            <kicker>arXiv:2511.17332v2 — WMAC / AAAI 2026</kicker>
+            <headline>Agentifying Agentic AI</headline>
+            <fr-en>
+              <fr>Présenté au WMAC 2026 – AAAI 2026 Bridge Program. Explore comment les équipes d'agents spécialisés peuvent atteindre une plus grande précision et rapidité.</fr>
+              <en>Presented at WMAC 2026 – AAAI 2026 Bridge Program. Explores how teams of specialized agents can achieve greater accuracy and speed.</en>
+            </fr-en>
+            <source href="https://arxiv.org/html/2511.17332v2" label="arXiv"/>
+          </article>
+        </column>
+      </columns>
+      <resourceSplit>
+        <side label="Ressources Communautaires">
+          <item href="https://github.com/Zijian-Ni/awesome-ai-agents-2026" title="awesome-ai-agents-2026">300+ frameworks, outils et plateformes</item>
+          <item href="https://github.com/VoltAgent/awesome-ai-agent-papers" title="awesome-ai-agent-papers">Collection d'articles de recherche 2026</item>
+        </side>
+        <side label="Community Resources">
+          <item href="https://github.com/ARUNAGIRINATHAN-K/awesome-ai-agents-2026" title="Awesome AI Agents 2026">Guides, benchmarks, analyses approfondies</item>
+        </side>
+      </resourceSplit>
+    </section>
+
+    <section id="use-cases" title-fr="Cas d'Usage Pratiques" title-en="Practical Use Cases">
+      <columns>
+        <column span="2">
+          <article large="true">
+            <headline>Par Fonction Entreprise / By Business Function</headline>
+            <image
+              src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200"
+              alt="Image décorative d'illustration"
+              caption="Image décorative sans lien avec l'article. Source: Pexels (banque d'images libres)."
+              licenseUrl="https://www.pexels.com/license/"
+              licenseLabel="(Licence Pexels)"/>
+            <bilingualList label-fr="Fonctions" label-en="Functions">
+              <item>
+                <fr>Service Client : Automatisation du triage des tickets, gestion des FAQ, suivi des retours et remboursements. Les agents IA peuvent absorber plus de 50 % des demandes entrantes.</fr>
+                <en>Customer Service: Ticket triage automation, FAQ management, tracking returns and refunds. AI agents can absorb over 50% of incoming requests.</en>
+              </item>
+              <item>
+                <fr>Ventes &amp; Marketing : Enrichissement des leads, scoring automatique des prospects, envoi d'e-mails personnalisés.</fr>
+                <en>Sales &amp; Marketing: Lead enrichment, automatic prospect scoring, sending personalized emails.</en>
+              </item>
+              <item>
+                <fr>Développement Logiciel : Planification de tâches, débogage, refactoring, exécution de vérifications, travail multi-outils vers des objectifs logiciels.</fr>
+                <en>Software Development: Task planning, debugging, refactoring, running checks, multi-tool work towards software goals.</en>
+              </item>
+              <item>
+                <fr>Recherche et Analyse : Analyse de documents, résumé, génération de contenu, réflexion et prise de décision.</fr>
+                <en>Research &amp; Analysis: Document analysis, summarization, content generation, reasoning and decision-making.</en>
+              </item>
+              <item>
+                <fr>Administration : Automatisation des workflows répétitifs mais pas entièrement prévisibles, touchant plusieurs outils.</fr>
+                <en>Administration: Automation of repetitive but not fully predictable workflows touching multiple tools.</en>
+              </item>
+            </bilingualList>
+          </article>
+        </column>
+        <column span="1">
+          <article>
+            <kicker>Références</kicker>
+            <headline>Études de Cas / Case Studies</headline>
+            <list>
+              <item href="https://aimonk.com/agentic-ai-examples-enterprise-roi-case-studies/" title="12 Agentic AI Examples with Measurable ROI">Enterprise case studies 2025–2026</item>
+              <item href="https://forcoda.com/blog/enterprise-ai-automation-use-cases" title="50 AI Automation Use Cases for Enterprise"></item>
+              <item href="https://sema4.ai/blog/ai-agent-use-cases/" title="10 AI Agent Use Cases Transforming Enterprises"></item>
+              <item href="https://www.techaheadcorp.com/blog/top-use-cases-of-agentic-ai-in-2026-across-industries/" title="Use Cases by Industry"></item>
+            </list>
+          </article>
+        </column>
+      </columns>
+    </section>
+
+    <section id="risks" title-fr="Risques et Défis" title-en="Risks and Challenges">
+      <columns>
+        <column span="1">
+          <article>
+            <headline>Sécurité / Security</headline>
+            <image
+              src="https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200"
+              alt="Image décorative d'illustration"
+              caption="Image décorative sans lien avec l'article. Source: Pexels (banque d'images libres)."
+              licenseUrl="https://www.pexels.com/license/"
+              licenseLabel="(Licence Pexels)"/>
+            <bilingualList label-fr="Menaces" label-en="Threats">
+              <item>
+                <fr>Deepfakes : Considérés comme l'une des principales menaces pour les entreprises et administrations en 2026.</fr>
+                <en>Deepfakes: Considered one of the main threats to businesses and administrations in 2026.</en>
+              </item>
+              <item>
+                <fr>Attaques IA : Industrialisation des attaques assistées par IA, réduisant considérablement le temps nécessaire pour lancer une attaque sophistiquée.</fr>
+                <en>AI Attacks: Industrialization of AI-assisted attacks, significantly reducing the time needed to launch sophisticated attacks.</en>
+              </item>
+            </bilingualList>
+            <source href="https://cap-formation.fr/20260622-ia-et-cybersecurite/" label="CAP Formation"/>
+          </article>
+        </column>
+      </columns>
+
+      <hr/>
+
+      <columns>
+        <column span="1">
+          <article>
+            <headline>Gouvernance / Governance</headline>
+            <bilingualList label-fr="Défis" label-en="Challenges">
+              <item>
+                <fr>Adoption &gt; Contrôle : L'adoption des agents IA dépasse souvent les capacités de contrôle des entreprises.</fr>
+                <en>Adoption &gt; Control: AI agent adoption often outpaces enterprises' control capabilities.</en>
+              </item>
+              <item>
+                <fr>Risques ignorés : La plupart des entreprises ignorent encore des risques fondamentaux liés aux agents IA.</fr>
+                <en>Ignored Risks: Most enterprises still ignore fundamental risks related to AI agents.</en>
+              </item>
+              <item>
+                <fr>Gouvernance autonome : Modules combinant IA explicable, pistes d'audit automatisées et surveillance de conformité en temps réel.</fr>
+                <en>Autonomous Governance: Modules combining explainable AI, automated audit trails, and real-time compliance monitoring.</en>
+              </item>
+            </bilingualList>
+            <sourceLine prefix="Sources">
+              <link href="https://www.gravitee.io/blog/state-of-ai-agent-security-2026-report-when-adoption-outpaces-control" label="Gravitee"/>
+              <link href="https://beam.ai/agentic-insights/ai-agent-security-in-2026-the-risks-most-enterprises-still-ignore" label="Beam.ai"/>
+              <link href="https://atlan.com/know/ai-agent-risks-guardrails/" label="Atlan"/>
+            </sourceLine>
+          </article>
+        </column>
+      </columns>
+
+      <hr/>
+
+      <columns>
+        <column span="1">
+          <article>
+            <headline>Défis Techniques / Technical Challenges</headline>
+            <bilingualList>
+              <item>
+                <fr>Intégration avec les systèmes existants : nécessité de connecter les agents à de vrais outils métiers.</fr>
+                <en>Integration with existing systems: need to connect agents to real business tools.</en>
+              </item>
+              <item>
+                <fr>Gestion de la mémoire et du contexte : les agents doivent maintenir la mémoire entre les interactions.</fr>
+                <en>Memory and context management: agents must maintain memory across interactions.</en>
+              </item>
+              <item>
+                <fr>Coordination multi-agents : déploiement d'essaims d'agents coordonnés dans des workflows complexes.</fr>
+                <en>Multi-agent coordination: deployment of coordinated agent swarms in complex workflows.</en>
+              </item>
+            </bilingualList>
+          </article>
+        </column>
+      </columns>
+    </section>
+
+    <section id="trends" title-fr="Tendances" title-en="Trends">
+      <columns>
+        <column span="2">
+          <article large="true">
+            <headline>Tendances Majeures / Major Trends</headline>
+            <bilingualList label-fr="Évolutions" label-en="Evolutions">
+              <item>
+                <fr>Des chatbots aux écosystèmes autonomes</fr>
+                <en>From chatbots to autonomous ecosystems</en>
+              </item>
+              <item>
+                <fr>De l'efficacité à la résilience d'entreprise</fr>
+                <en>From efficiency to enterprise resilience</en>
+              </item>
+              <item>
+                <fr>Systèmes multi-agents redéfinissant les opérations</fr>
+                <en>Multi-agent systems redefining operations</en>
+              </item>
+              <item>
+                <fr>Évolution des modèles de tarification (par siège, basé sur l'usage, basé sur les résultats)</fr>
+                <en>Evolution of pricing models (seat-based, usage-based, outcome-based)</en>
+              </item>
+            </bilingualList>
+          </article>
+        </column>
+        <column span="1">
+          <article>
+            <headline>Questions Ouvertes / Open Questions</headline>
+            <bilingualList label-fr="Défis" label-en="Challenges">
+              <item>
+                <fr>Comment passer du pilote à la production ?</fr>
+                <en>How to move from pilot to production?</en>
+              </item>
+              <item>
+                <fr>Quelle est la maturité des solutions actuelles ?</fr>
+                <en>What is the maturity of current solutions?</en>
+              </item>
+              <item>
+                <fr>Comment mesurer le ROI des agents IA ?</fr>
+                <en>How to measure AI agent ROI?</en>
+              </item>
+              <item>
+                <fr>Quels sont les risques à long terme ?</fr>
+                <en>What are the long-term risks?</en>
+              </item>
+              <item>
+                <fr>Comment intégrer les agents dans les architectures existantes ?</fr>
+                <en>How to integrate agents into existing architectures?</en>
+              </item>
+            </bilingualList>
+          </article>
+        </column>
+      </columns>
+    </section>
+
+    <section id="sources" title-fr="Sources à Consulter" title-en="Sources to Consult">
+      <columns>
+        <column span="1">
+          <article>
+            <kicker>Francophones</kicker>
+            <headline>Blogs &amp; Articles FR</headline>
+            <list>
+              <item href="https://www.aixploria.com/last-ai/" title="AIxploria — Nouveaux outils IA 2026"></item>
+              <item href="https://www.jedha.co/formation-ia/meilleurs-outils-automatisation-gratuits" title="Jedha — Outils d'automatisation"></item>
+              <item href="https://www.cress-midipyrenees.fr/agent-ia-gratuit-comment-bien-choisir-son-outil-en-2026/" title="Cress — Choix des outils"></item>
+              <item href="https://cap-formation.fr/20260622-ia-et-cybersecurite/" title="CAP Formation — Cybersécurité"></item>
+              <item href="https://educasium.com/en/blog/agent-ia-entreprise-guide-cas-usage-2026" title="Educasium — Guide complet"></item>
+            </list>
+          </article>
+        </column>
+        <column span="1">
+          <article>
+            <kicker>Anglophones</kicker>
+            <headline>Blogs &amp; Articles EN</headline>
+            <list>
+              <item href="https://blog.mean.ceo/ai-agents-news-june-2026/" title="Mean CEO — AI Agents News"></item>
+              <item href="https://www.cxotalk.com/episode/agentic-ai-and-the-future-of-enterprise-software-in-2026" title="CXOTalk — Agentic AI"></item>
+              <item href="https://www.vybe.build/blog/best-ai-agent-platforms-2026" title="Vybe — Best Platforms"></item>
+              <item href="https://cogitx.ai/blog/ai-agents-complete-overview-2026" title="Cogitx — Complete Overview"></item>
+              <item href="https://www.datacamp.com/blog/best-ai-agents" title="DataCamp — Best Agents"></item>
+            </list>
+          </article>
+        </column>
+        <column span="1">
+          <article>
+            <kicker>Institutionnels</kicker>
+            <headline>Rapports &amp; Études</headline>
+            <list>
+              <item href="https://paul-okhrem.com/enterprise-ai-agents-statistics-2026/" title="Forrester — Statistiques 2026"></item>
+              <item href="https://aigovernance.com/news/ai-governance-weekly-june-19-2026" title="AI Governance Institute"></item>
+              <item href="https://www.gravitee.io/blog/state-of-ai-agent-security-2026-report-when-adoption-outpaces-control" title="Gravitee — Rapport Sécurité"></item>
+              <item href="https://cloud.google.com/resources/content/ai-agent-trends-2026" title="Google Cloud — Tendances 2026"></item>
+              <item href="https://github.com/Zijian-Ni/awesome-ai-agents-2026" title="awesome-ai-agents-2026 (GitHub)"></item>
+              <item href="https://github.com/VoltAgent/awesome-ai-agent-papers" title="awesome-ai-agent-papers (GitHub)"></item>
+            </list>
+          </article>
+        </column>
+      </columns>
+    </section>
+
+    <section id="recommendations" title-fr="Recommandations" title-en="Recommendations">
+      <columns>
+        <column span="1">
+          <article>
+            <headline>Pour les Entreprises / For Enterprises</headline>
+            <bilingualList label-fr="Conseils" label-en="Advice">
+              <item>
+                <fr>Commencer par des cas d'usage mesurables (triage support, enrichissement leads)</fr>
+                <en>Start with measurable use cases (support triage, lead enrichment)</en>
+              </item>
+              <item>
+                <fr>Investir dans la gouvernance autonome (IA explicable, conformité)</fr>
+                <en>Invest in autonomous governance (explainable AI, compliance)</en>
+              </item>
+              <item>
+                <fr>Former les équipes aux nouvelles menaces (deepfakes, attaques IA)</fr>
+                <en>Train teams on new threats (deepfakes, AI attacks)</en>
+              </item>
+              <item>
+                <fr>Évaluer l'intégration avec les outils existants</fr>
+                <en>Evaluate integration with existing tools</en>
+              </item>
+              <item>
+                <fr>Mesurer le ROI avec des métriques claires</fr>
+                <en>Measure ROI with clear metrics</en>
+              </item>
+            </bilingualList>
+          </article>
+        </column>
+        <column span="1">
+          <article>
+            <headline>Pour les Développeurs / For Developers</headline>
+            <bilingualList>
+              <item>
+                <fr>Utiliser des frameworks matures (Microsoft Autopilots, Vybe)</fr>
+                <en>Use mature frameworks (Microsoft Autopilots, Vybe)</en>
+              </item>
+              <item>
+                <fr>Intégrer la sécurité dès la conception</fr>
+                <en>Integrate security by design</en>
+              </item>
+              <item>
+                <fr>Participer à la communauté (GitHub, arXiv)</fr>
+                <en>Engage with community (GitHub, arXiv)</en>
+              </item>
+              <item>
+                <fr>Expérimenter avec les systèmes multi-agents</fr>
+                <en>Experiment with multi-agent systems</en>
+              </item>
+            </bilingualList>
+          </article>
+        </column>
+      </columns>
+    </section>
+
+    <section id="glossary" title-fr="Glossaire" title-en="Glossary">
+      <glossary>
+        <entry>
+          <term>Agent IA / AI Agent</term>
+          <fr>Système capable d'enchaîner des actions de bout en bout pour accomplir un objectif</fr>
+          <en>System capable of chaining end-to-end actions to accomplish a goal</en>
+        </entry>
+        <entry>
+          <term>IA Agentique / Agentic AI</term>
+          <fr>Approche où l'IA agit de manière autonome avec un certain degré d'agency</fr>
+          <en>Approach where AI acts autonomously with a degree of agency</en>
+        </entry>
+        <entry>
+          <term>Gouvernance Autonome</term>
+          <fr>Modules combinant IA explicable, pistes d'audit automatisées et surveillance de conformité</fr>
+          <en>Modules combining explainable AI, automated audit trails, and compliance monitoring</en>
+        </entry>
+        <entry>
+          <term>Multi-Agent Coordination</term>
+          <fr>Collaboration entre plusieurs agents spécialisés pour accomplir des tâches complexes</fr>
+          <en>Collaboration between multiple specialized agents to accomplish complex tasks</en>
+        </entry>
+        <entry>
+          <term>RAG</term>
+          <fr>Retrieval-Augmented Generation — technique améliorant la précision des modèles de langage</fr>
+          <en>Retrieval-Augmented Generation — technique improving language model accuracy</en>
+        </entry>
+        <entry>
+          <term>Deepfake</term>
+          <fr>Contenu synthétique réaliste généré par IA</fr>
+          <en>Realistic synthetic content generated by AI</en>
+        </entry>
+      </glossary>
+    </section>
+  </sections>
+
+  <footer>
+    <line1><strong>THE AI AGENTS TIMES</strong> Rapport Hebdomadaire | Weekly Report — 22 Juin 2026 | June 22, 2026</line1>
+    <line2>Ce rapport est basé sur des recherches web effectuées entre le 15 et le 22 juin 2026. / This report is based on web searches conducted between June 15–22, 2026.</line2>
+  </footer>
+</report>

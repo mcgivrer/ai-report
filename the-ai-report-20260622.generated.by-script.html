@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THE AI AGENTS TIMES | 22 Juin 2026</title>
+<style data-inline-source="/home/frederic/Documents/ai-report/templates/default/journal-theme.css">
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --paper-bg: #faf8f4;
+  --ink: #111;
+  --ink-soft: #555;
+  --ink-muted: #666;
+  --rule: #000;
+  --rule-soft: #ccc;
+  --rule-mid: #bbb;
+  --frame-bg: #e8e4dc;
+  --box-bg: #f0ece4;
+  --paper-shadow: 0 4px 40px rgba(0, 0, 0, 0.25);
+  --font-body: "Times New Roman", Times, serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--frame-bg);
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.newspaper {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 40px 45px 50px;
+  background: var(--paper-bg);
+  box-shadow: var(--paper-shadow);
+}
+
+img {
+  filter: grayscale(100%) contrast(1.1);
+  max-width: 100%;
+  display: block;
+}
+
+.masthead {
+  text-align: center;
+  padding-bottom: 12px;
+}
+
+.masthead-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  padding: 6px 0;
+  border-top: 2px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 8px;
+}
+
+.masthead h1 {
+  font-size: 5rem;
+  font-weight: 900;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 8px 0 4px;
+}
+
+.masthead-rule { height: 1px; background: var(--rule); margin: 5px 0; }
+.masthead-double { border-top: 4px double var(--rule); margin: 8px 0 0; }
+
+.masthead-subtitle {
+  font-size: 0.85rem;
+  font-style: italic;
+  letter-spacing: 1.5px;
+  margin: 4px 0 6px;
+}
+
+.masthead-figure {
+  margin: 12px 0 10px;
+  border-top: 1px solid var(--rule-soft);
+  border-bottom: 1px solid var(--rule-soft);
+  padding: 8px 0;
+}
+
+.masthead-figure img {
+  width: 100%;
+  max-height: 330px;
+  object-fit: cover;
+}
+
+.masthead-figure figcaption {
+  font-size: 0.72rem;
+  color: var(--ink-soft);
+  margin-top: 6px;
+  text-align: center;
+}
+
+.license-link {
+  font-weight: 700;
+  border-bottom-style: solid;
+}
+
+.section-break {
+  display: flex;
+  align-items: center;
+  margin: 22px 0 16px;
+}
+
+.section-break .line { flex: 1; height: 1px; background: var(--rule); }
+
+.section-break .label {
+  padding: 3px 16px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: var(--rule);
+  color: var(--paper-bg);
+}
+
+.section-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  padding: 7px 0;
+  border-top: 3px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  margin: 26px 0 18px;
+  background: var(--rule);
+  color: var(--paper-bg);
+}
+
+.columns {
+  display: flex;
+  gap: 0;
+  width: 100%;
+}
+
+.col {
+  padding: 0 20px;
+  border-right: 1px solid var(--rule-mid);
+}
+
+.col:first-child { padding-left: 0; }
+.col:last-child { padding-right: 0; border-right: none; }
+
+.col-1 { flex: 1; }
+.col-2 { flex: 2; }
+
+.kicker {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--ink-soft);
+  margin-bottom: 4px;
+}
+
+.article-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 6px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid var(--rule);
+}
+
+.article-title.large { font-size: 1.65rem; }
+
+.article-byline {
+  font-size: 0.7rem;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin-bottom: 8px;
+}
+
+.article-figure {
+  margin: 10px 0 12px;
+}
+
+.article-figure img {
+  width: 100%;
+  border: 1px solid var(--rule-soft);
+}
+
+.article-figure figcaption {
+  font-size: 0.72rem;
+  color: var(--ink-soft);
+  margin-top: 6px;
+  font-style: italic;
+}
+
+.article-figure.align-left,
+.article-figure.align-right {
+  width: 48%;
+}
+
+.article-figure.align-left {
+  float: left;
+  margin: 4px 14px 8px 0;
+}
+
+.article-figure.align-right {
+  float: right;
+  margin: 4px 0 8px 14px;
+}
+
+p { text-align: justify; margin-bottom: 8px; }
+
+.pull-quote {
+  border-top: 3px double var(--rule);
+  border-bottom: 3px double var(--rule);
+  padding: 12px 8px;
+  margin: 16px 0;
+  font-size: 1rem;
+  font-style: italic;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.encadre {
+  border: 1px solid var(--rule);
+  padding: 12px 14px;
+  margin: 14px 0;
+  background: var(--box-bg);
+}
+
+.encadre-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 5px;
+  margin-bottom: 8px;
+}
+
+.bilingual {
+  display: flex;
+  gap: 0;
+}
+
+.bilingual .lang-col {
+  flex: 1;
+  padding: 0 12px;
+  border-right: 1px solid var(--rule-soft);
+}
+
+.bilingual .lang-col:first-child { padding-left: 0; }
+.bilingual .lang-col:last-child { padding-right: 0; border-right: none; }
+
+.lang-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--ink-muted);
+  margin-bottom: 6px;
+}
+
+ul, ol { padding-left: 0; margin: 6px 0; list-style: none; }
+li { margin: 4px 0; text-align: justify; padding-left: 14px; position: relative; }
+li::before { content: "-"; position: absolute; left: 0; color: var(--rule); }
+
+a {
+  color: var(--rule);
+  text-decoration: none;
+  border-bottom: 1px dotted #777;
+}
+a:hover { background: #e8e2d8; }
+
+.hr { border: none; border-top: 1px solid var(--rule-soft); margin: 18px 0; }
+
+.dropcap::first-letter {
+  float: left;
+  font-size: 3.8rem;
+  line-height: 0.85;
+  margin: 4px 5px 0 0;
+  font-weight: 900;
+}
+
+.glossary { display: flex; flex-direction: column; }
+
+.glossary-header {
+  display: flex;
+  background: var(--rule);
+  color: var(--paper-bg);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 6px 0;
+}
+
+.glossary-row {
+  display: flex;
+  border-bottom: 1px solid var(--rule-soft);
+  padding: 9px 0;
+}
+
+.glossary-row:nth-child(even) { background: var(--box-bg); }
+
+.glossary-term {
+  flex: 0 0 195px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 0 10px 0 0;
+}
+
+.glossary-header .glossary-term { padding-left: 0; }
+
+.glossary-defs {
+  flex: 1;
+  display: flex;
+}
+
+.glossary-def {
+  flex: 1;
+  padding: 0 12px;
+  border-left: 1px solid var(--rule-soft);
+  font-size: 0.88rem;
+}
+
+.glossary-header .glossary-def { border-left-color: #444; }
+
+.newspaper-footer {
+  border-top: 4px double var(--rule);
+  padding-top: 18px;
+  margin-top: 32px;
+  text-align: center;
+  font-size: 0.82rem;
+  font-style: italic;
+  color: #444;
+}
+
+.newspaper-footer strong { color: var(--rule); }
+
+@media (max-width: 768px) {
+  .newspaper { padding: 20px 18px 30px; }
+  .masthead h1 { font-size: 2.6rem; }
+  .masthead-figure img { max-height: 200px; }
+  .columns { flex-direction: column; }
+  .col { border-right: none; border-bottom: 1px solid var(--rule-soft); padding: 14px 0; }
+  .bilingual { flex-direction: column; }
+  .bilingual .lang-col { border-right: none; border-bottom: 1px solid var(--rule-soft); padding: 10px 0; }
+  .article-figure.align-left,
+  .article-figure.align-right {
+    float: none;
+    width: 100%;
+    margin: 10px 0 12px;
+  }
+  .glossary-row { flex-direction: column; }
+  .glossary-term { margin-bottom: 6px; }
+  .glossary-defs { flex-direction: column; }
+  .glossary-def { border-left: none; border-top: 1px solid var(--rule-soft); padding: 6px 0; }
+}
+
+</style>
+</head>
+<body><div class="newspaper">
+<header class="masthead"><div class="masthead-meta">
+<span>Vol. I — N° 1</span><span>Édition Hebdomadaire des Agents IA</span><span>Lundi 22 Juin 2026 — Gratuit</span>
+</div>
+<h1>The AI Agents Times</h1>
+<div class="masthead-rule"></div>
+<div class="masthead-subtitle">Le Quotidien de la Révolution Agentique — The Daily of the Agentic Revolution</div>
+<figure class="masthead-figure"><img src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600" alt="Image décorative de couverture"><figcaption>Image décorative sans lien éditorial. Source: Pexels (banque d'images libres). <a class="license-link" href="https://www.pexels.com/license/">(Licence Pexels)</a></figcaption></figure><div class="masthead-double"></div></header><div class="section-break">
+<div class="line"></div>
+<div class="label">Résumé Exécutif — Executive Summary</div>
+<div class="line"></div>
+</div>
+<div class="bilingual">
+<div class="lang-col">
+<div class="lang-label">Français</div>
+<p class="dropcap">La semaine du 15 au 22 juin 2026 a marqué une accélération significative dans l'adoption des agents IA en entreprise. Les principaux développements incluent le lancement par Microsoft de la catégorie Autopilots dans son écosystème 365/Azure, l'introduction par Google de capacités avancées de planification multi-agents avec une amélioration de 34 % de la précision RAG, et l'émergence de modules de gouvernance autonome intégrant l'IA explicable et le suivi de conformité en temps réel.</p>
+<p>Les statistiques montrent que moins de 10 % des entreprises ont réussi à passer à l'échelle avec les agents IA, soulignant l'importance de la gouvernance et de l'intégration avec les outils existants.</p>
+</div>
+<div class="lang-col">
+<div class="lang-label">English</div>
+<p class="dropcap">The week of June 15–22, 2026 saw significant acceleration in enterprise AI agent adoption. Key developments include Microsoft's launch of the Autopilots category in its 365/Azure ecosystem, Google's introduction of advanced multi-agent planning capabilities with a 34% improvement in RAG accuracy, and the emergence of autonomous governance modules combining explainable AI with real-time compliance monitoring.</p>
+<p>Statistics show that fewer than 10% of enterprises have successfully scaled AI agents, highlighting the importance of governance and integration with existing tools.</p>
+</div>
+</div>
+<div class="section-title">Lancements Récents — Recent Launches</div>
+<div class="columns">
+<div class="col col-1">
+<div class="kicker">Plateformes</div>
+<div class="article-title">Microsoft Autopilots</div>
+<figure class="article-figure"><img src="https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" alt="Image décorative d'illustration"><figcaption>Image décorative sans lien avec l'article. Source: Pexels (banque d'images libres). <a class="license-link" href="https://www.pexels.com/license/">(Licence Pexels)</a></figcaption></figure><p><strong>FR :</strong> Nouvelle catégorie d'agents introduite dans l'écosystème Microsoft 365 et Azure en juin 2026. Conçus pour automatiser des workflows complets au sein des outils Microsoft existants.</p>
+<p><strong>EN :</strong> New agent category introduced in Microsoft 365 and Azure ecosystem in June 2026. Designed to automate complete workflows within existing Microsoft tools.</p>
+<p><em>Source :</em> <a href="https://www.vybe.build/blog/best-ai-agent-platforms-2026">Vybe Blog</a></p>
+</div>
+<div class="col col-1">
+<div class="kicker">Recherche</div>
+<div class="article-title">Google Multi-Agent Planning</div>
+<figure class="article-figure"><img src="https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" alt="Image décorative d'illustration"><figcaption>Image décorative sans lien avec l'article. Source: Pexels (banque d'images libres). <a class="license-link" href="https://www.pexels.com/license/">(Licence Pexels)</a></figcaption></figure><p><strong>FR :</strong> Amélioration de 34 % de la précision RAG grâce à de nouvelles capacités de planification et de routage multi-agents. Migration forcée vers Gemini 3.5 Flash pour les administrateurs d'entreprise le 9 juin 2026.</p>
+<p><strong>EN :</strong> 34% improvement in RAG accuracy through new multi-agent planning and routing capabilities. Forced migration to Gemini 3.5 Flash for enterprise administrators on June 9, 2026.</p>
+<p><em>Source :</em> <a href="https://www.vybe.build/blog/best-ai-agent-platforms-2026">Vybe Blog</a></p>
+<div class="pull-quote">« Moins de 10 % des entreprises ont réussi à passer à l'échelle avec les agents IA. »</div>
+</div>
+<div class="col col-1">
+<div class="kicker">Outils</div>
+<div class="article-title">Google Antigravity &amp; Perplexity Computer</div>
+<p><strong>FR :</strong> Plateforme agent-first et orchestration multi-modèles pour des tâches complexes.</p>
+<p><strong>EN :</strong> Agent-first development platform and multi-model orchestration for complex tasks.</p>
+<p><em>Source :</em> <a href="https://www.datacamp.com/blog/best-ai-agents">DataCamp</a></p>
+<div class="encadre">
+<div class="encadre-title">Chiffre clé / Key Figure</div>
+<p><strong>FR :</strong>50 % des éditeurs ERP lanceront des modules de gouvernance autonome en 2026.</p>
+<p><strong>EN :</strong>50% of ERP vendors will launch autonomous governance modules in 2026.</p>
+<p><em>Source :</em><a href="https://paul-okhrem.com/enterprise-ai-agents-statistics-2026/">Forrester via Paul Okhrem</a></p>
+</div>
+</div>
+</div>
+<div class="section-title">Articles de Recherche — Research Papers</div>
+<div class="columns">
+<div class="col col-1">
+<div class="kicker">arXiv:2606.05608v1</div>
+<div class="article-title">The End of Software Engineering</div>
+<figure class="article-figure"><img src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" alt="Image décorative d'illustration"><figcaption>Image décorative sans lien avec l'article. Source: Pexels (banque d'images libres). <a class="license-link" href="https://www.pexels.com/license/">(Licence Pexels)</a></figcaption></figure><p><strong>FR :</strong> Décrit comment même les modèles de 7 B paramètres peuvent résoudre 18,20 % des tâches d'ingénierie logicielle automatisée. Étude pilote sur des essaims d'agents coordonnés dans 20+ workflows de débogage.</p>
+<p><strong>EN :</strong> Describes how even 7B parameter models can solve 18.20% of automated software engineering tasks. Pilot study on coordinated agent swarms across 20+ debugging workflows.</p>
+<p><em>Source :</em> <a href="https://arxiv.org/html/2606.05608v1">arXiv</a></p>
+</div>
+<div class="col col-1">
+<div class="kicker">arXiv:2602.17753v1</div>
+<div class="article-title">The 2025 AI Agent Index</div>
+<p><strong>FR :</strong> Index complet des systèmes d'IA agentique déployés, documentant leurs caractéristiques techniques et de sécurité.</p>
+<p><strong>EN :</strong> Comprehensive index of deployed agentic AI systems, documenting their technical and safety features.</p>
+<p><em>Source :</em> <a href="https://arxiv.org/html/2602.17753v1">arXiv</a></p>
+</div>
+<div class="col col-1">
+<div class="kicker">arXiv:2511.17332v2 — WMAC / AAAI 2026</div>
+<div class="article-title">Agentifying Agentic AI</div>
+<p><strong>FR :</strong> Présenté au WMAC 2026 – AAAI 2026 Bridge Program. Explore comment les équipes d'agents spécialisés peuvent atteindre une plus grande précision et rapidité.</p>
+<p><strong>EN :</strong> Presented at WMAC 2026 – AAAI 2026 Bridge Program. Explores how teams of specialized agents can achieve greater accuracy and speed.</p>
+<p><em>Source :</em> <a href="https://arxiv.org/html/2511.17332v2">arXiv</a></p>
+</div>
+</div>
+<div class="hr"></div>
+<div class="bilingual">
+<div class="lang-col">
+<div class="lang-label">Ressources Communautaires</div>
+<ul>
+<li>
+<a href="https://github.com/Zijian-Ni/awesome-ai-agents-2026">awesome-ai-agents-2026</a> — 300+ frameworks, outils et plateformes</li>
+<li>
+<a href="https://github.com/VoltAgent/awesome-ai-agent-papers">awesome-ai-agent-papers</a> — Collection d'articles de recherche 2026</li>
+</ul>
+</div>
+<div class="lang-col">
+<div class="lang-label">Community Resources</div>
+<ul><li>
+<a href="https://github.com/ARUNAGIRINATHAN-K/awesome-ai-agents-2026">Awesome AI Agents 2026</a> — Guides, benchmarks, analyses approfondies</li></ul>
+</div>
+</div>
+<div class="section-title">Cas d'Usage Pratiques — Practical Use Cases</div>
+<div class="columns">
+<div class="col col-2">
+<div class="article-title large">Par Fonction Entreprise / By Business Function</div>
+<figure class="article-figure"><img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" alt="Image décorative d'illustration"><figcaption>Image décorative sans lien avec l'article. Source: Pexels (banque d'images libres). <a class="license-link" href="https://www.pexels.com/license/">(Licence Pexels)</a></figcaption></figure><div class="bilingual" style="margin-top:10px;">
+<div class="lang-col">
+<div class="lang-label">Fonctions</div>
+<ul>
+<li>Service Client : Automatisation du triage des tickets, gestion des FAQ, suivi des retours et remboursements. Les agents IA peuvent absorber plus de 50 % des demandes entrantes.</li>
+<li>Ventes &amp; Marketing : Enrichissement des leads, scoring automatique des prospects, envoi d'e-mails personnalisés.</li>
+<li>Développement Logiciel : Planification de tâches, débogage, refactoring, exécution de vérifications, travail multi-outils vers des objectifs logiciels.</li>
+<li>Recherche et Analyse : Analyse de documents, résumé, génération de contenu, réflexion et prise de décision.</li>
+<li>Administration : Automatisation des workflows répétitifs mais pas entièrement prévisibles, touchant plusieurs outils.</li>
+</ul>
+</div>
+<div class="lang-col">
+<div class="lang-label">Functions</div>
+<ul>
+<li>Customer Service: Ticket triage automation, FAQ management, tracking returns and refunds. AI agents can absorb over 50% of incoming requests.</li>
+<li>Sales &amp; Marketing: Lead enrichment, automatic prospect scoring, sending personalized emails.</li>
+<li>Software Development: Task planning, debugging, refactoring, running checks, multi-tool work towards software goals.</li>
+<li>Research &amp; Analysis: Document analysis, summarization, content generation, reasoning and decision-making.</li>
+<li>Administration: Automation of repetitive but not fully predictable workflows touching multiple tools.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col col-1">
+<div class="kicker">Références</div>
+<div class="article-title">Études de Cas / Case Studies</div>
+<ul>
+<li>
+<a href="https://aimonk.com/agentic-ai-examples-enterprise-roi-case-studies/">12 Agentic AI Examples with Measurable ROI</a> — Enterprise case studies 2025–2026</li>
+<li><a href="https://forcoda.com/blog/enterprise-ai-automation-use-cases">50 AI Automation Use Cases for Enterprise</a></li>
+<li><a href="https://sema4.ai/blog/ai-agent-use-cases/">10 AI Agent Use Cases Transforming Enterprises</a></li>
+<li><a href="https://www.techaheadcorp.com/blog/top-use-cases-of-agentic-ai-in-2026-across-industries/">Use Cases by Industry</a></li>
+</ul>
+</div>
+</div>
+<div class="section-title">Risques et Défis — Risks and Challenges</div>
+<div class="columns"><div class="col col-1">
+<div class="article-title">Sécurité / Security</div>
+<figure class="article-figure"><img src="https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" alt="Image décorative d'illustration"><figcaption>Image décorative sans lien avec l'article. Source: Pexels (banque d'images libres). <a class="license-link" href="https://www.pexels.com/license/">(Licence Pexels)</a></figcaption></figure><div class="bilingual" style="margin-top:10px;">
+<div class="lang-col">
+<div class="lang-label">Menaces</div>
+<ul>
+<li>Deepfakes : Considérés comme l'une des principales menaces pour les entreprises et administrations en 2026.</li>
+<li>Attaques IA : Industrialisation des attaques assistées par IA, réduisant considérablement le temps nécessaire pour lancer une attaque sophistiquée.</li>
+</ul>
+</div>
+<div class="lang-col">
+<div class="lang-label">Threats</div>
+<ul>
+<li>Deepfakes: Considered one of the main threats to businesses and administrations in 2026.</li>
+<li>AI Attacks: Industrialization of AI-assisted attacks, significantly reducing the time needed to launch sophisticated attacks.</li>
+</ul>
+</div>
+</div>
+<p><em>Source :</em> <a href="https://cap-formation.fr/20260622-ia-et-cybersecurite/">CAP Formation</a></p>
+</div></div>
+<div class="hr"></div>
+<div class="columns"><div class="col col-1">
+<div class="article-title">Gouvernance / Governance</div>
+<div class="bilingual" style="margin-top:10px;">
+<div class="lang-col">
+<div class="lang-label">Défis</div>
+<ul>
+<li>Adoption &gt; Contrôle : L'adoption des agents IA dépasse souvent les capacités de contrôle des entreprises.</li>
+<li>Risques ignorés : La plupart des entreprises ignorent encore des risques fondamentaux liés aux agents IA.</li>
+<li>Gouvernance autonome : Modules combinant IA explicable, pistes d'audit automatisées et surveillance de conformité en temps réel.</li>
+</ul>
+</div>
+<div class="lang-col">
+<div class="lang-label">Challenges</div>
+<ul>
+<li>Adoption &gt; Control: AI agent adoption often outpaces enterprises' control capabilities.</li>
+<li>Ignored Risks: Most enterprises still ignore fundamental risks related to AI agents.</li>
+<li>Autonomous Governance: Modules combining explainable AI, automated audit trails, and real-time compliance monitoring.</li>
+</ul>
+</div>
+</div>
+<p><em>Sources :</em> <a href="https://www.gravitee.io/blog/state-of-ai-agent-security-2026-report-when-adoption-outpaces-control">Gravitee</a>, <a href="https://beam.ai/agentic-insights/ai-agent-security-in-2026-the-risks-most-enterprises-still-ignore">Beam.ai</a>, <a href="https://atlan.com/know/ai-agent-risks-guardrails/">Atlan</a></p>
+</div></div>
+<div class="hr"></div>
+<div class="columns"><div class="col col-1">
+<div class="article-title">Défis Techniques / Technical Challenges</div>
+<div class="bilingual" style="margin-top:10px;">
+<div class="lang-col"><ul>
+<li>Intégration avec les systèmes existants : nécessité de connecter les agents à de vrais outils métiers.</li>
+<li>Gestion de la mémoire et du contexte : les agents doivent maintenir la mémoire entre les interactions.</li>
+<li>Coordination multi-agents : déploiement d'essaims d'agents coordonnés dans des workflows complexes.</li>
+</ul></div>
+<div class="lang-col"><ul>
+<li>Integration with existing systems: need to connect agents to real business tools.</li>
+<li>Memory and context management: agents must maintain memory across interactions.</li>
+<li>Multi-agent coordination: deployment of coordinated agent swarms in complex workflows.</li>
+</ul></div>
+</div>
+</div></div>
+<div class="section-title">Tendances — Trends</div>
+<div class="columns">
+<div class="col col-2">
+<div class="article-title large">Tendances Majeures / Major Trends</div>
+<div class="bilingual" style="margin-top:10px;">
+<div class="lang-col">
+<div class="lang-label">Évolutions</div>
+<ul>
+<li>Des chatbots aux écosystèmes autonomes</li>
+<li>De l'efficacité à la résilience d'entreprise</li>
+<li>Systèmes multi-agents redéfinissant les opérations</li>
+<li>Évolution des modèles de tarification (par siège, basé sur l'usage, basé sur les résultats)</li>
+</ul>
+</div>
+<div class="lang-col">
+<div class="lang-label">Evolutions</div>
+<ul>
+<li>From chatbots to autonomous ecosystems</li>
+<li>From efficiency to enterprise resilience</li>
+<li>Multi-agent systems redefining operations</li>
+<li>Evolution of pricing models (seat-based, usage-based, outcome-based)</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col col-1">
+<div class="article-title">Questions Ouvertes / Open Questions</div>
+<div class="bilingual" style="margin-top:10px;">
+<div class="lang-col">
+<div class="lang-label">Défis</div>
+<ul>
+<li>Comment passer du pilote à la production ?</li>
+<li>Quelle est la maturité des solutions actuelles ?</li>
+<li>Comment mesurer le ROI des agents IA ?</li>
+<li>Quels sont les risques à long terme ?</li>
+<li>Comment intégrer les agents dans les architectures existantes ?</li>
+</ul>
+</div>
+<div class="lang-col">
+<div class="lang-label">Challenges</div>
+<ul>
+<li>How to move from pilot to production?</li>
+<li>What is the maturity of current solutions?</li>
+<li>How to measure AI agent ROI?</li>
+<li>What are the long-term risks?</li>
+<li>How to integrate agents into existing architectures?</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="section-title">Sources à Consulter — Sources to Consult</div>
+<div class="columns">
+<div class="col col-1">
+<div class="kicker">Francophones</div>
+<div class="article-title">Blogs &amp; Articles FR</div>
+<ul>
+<li><a href="https://www.aixploria.com/last-ai/">AIxploria — Nouveaux outils IA 2026</a></li>
+<li><a href="https://www.jedha.co/formation-ia/meilleurs-outils-automatisation-gratuits">Jedha — Outils d'automatisation</a></li>
+<li><a href="https://www.cress-midipyrenees.fr/agent-ia-gratuit-comment-bien-choisir-son-outil-en-2026/">Cress — Choix des outils</a></li>
+<li><a href="https://cap-formation.fr/20260622-ia-et-cybersecurite/">CAP Formation — Cybersécurité</a></li>
+<li><a href="https://educasium.com/en/blog/agent-ia-entreprise-guide-cas-usage-2026">Educasium — Guide complet</a></li>
+</ul>
+</div>
+<div class="col col-1">
+<div class="kicker">Anglophones</div>
+<div class="article-title">Blogs &amp; Articles EN</div>
+<ul>
+<li><a href="https://blog.mean.ceo/ai-agents-news-june-2026/">Mean CEO — AI Agents News</a></li>
+<li><a href="https://www.cxotalk.com/episode/agentic-ai-and-the-future-of-enterprise-software-in-2026">CXOTalk — Agentic AI</a></li>
+<li><a href="https://www.vybe.build/blog/best-ai-agent-platforms-2026">Vybe — Best Platforms</a></li>
+<li><a href="https://cogitx.ai/blog/ai-agents-complete-overview-2026">Cogitx — Complete Overview</a></li>
+<li><a href="https://www.datacamp.com/blog/best-ai-agents">DataCamp — Best Agents</a></li>
+</ul>
+</div>
+<div class="col col-1">
+<div class="kicker">Institutionnels</div>
+<div class="article-title">Rapports &amp; Études</div>
+<ul>
+<li><a href="https://paul-okhrem.com/enterprise-ai-agents-statistics-2026/">Forrester — Statistiques 2026</a></li>
+<li><a href="https://aigovernance.com/news/ai-governance-weekly-june-19-2026">AI Governance Institute</a></li>
+<li><a href="https://www.gravitee.io/blog/state-of-ai-agent-security-2026-report-when-adoption-outpaces-control">Gravitee — Rapport Sécurité</a></li>
+<li><a href="https://cloud.google.com/resources/content/ai-agent-trends-2026">Google Cloud — Tendances 2026</a></li>
+<li><a href="https://github.com/Zijian-Ni/awesome-ai-agents-2026">awesome-ai-agents-2026 (GitHub)</a></li>
+<li><a href="https://github.com/VoltAgent/awesome-ai-agent-papers">awesome-ai-agent-papers (GitHub)</a></li>
+</ul>
+</div>
+</div>
+<div class="section-title">Recommandations — Recommendations</div>
+<div class="columns">
+<div class="col col-1">
+<div class="article-title">Pour les Entreprises / For Enterprises</div>
+<div class="bilingual" style="margin-top:10px;">
+<div class="lang-col">
+<div class="lang-label">Conseils</div>
+<ul>
+<li>Commencer par des cas d'usage mesurables (triage support, enrichissement leads)</li>
+<li>Investir dans la gouvernance autonome (IA explicable, conformité)</li>
+<li>Former les équipes aux nouvelles menaces (deepfakes, attaques IA)</li>
+<li>Évaluer l'intégration avec les outils existants</li>
+<li>Mesurer le ROI avec des métriques claires</li>
+</ul>
+</div>
+<div class="lang-col">
+<div class="lang-label">Advice</div>
+<ul>
+<li>Start with measurable use cases (support triage, lead enrichment)</li>
+<li>Invest in autonomous governance (explainable AI, compliance)</li>
+<li>Train teams on new threats (deepfakes, AI attacks)</li>
+<li>Evaluate integration with existing tools</li>
+<li>Measure ROI with clear metrics</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col col-1">
+<div class="article-title">Pour les Développeurs / For Developers</div>
+<div class="bilingual" style="margin-top:10px;">
+<div class="lang-col"><ul>
+<li>Utiliser des frameworks matures (Microsoft Autopilots, Vybe)</li>
+<li>Intégrer la sécurité dès la conception</li>
+<li>Participer à la communauté (GitHub, arXiv)</li>
+<li>Expérimenter avec les systèmes multi-agents</li>
+</ul></div>
+<div class="lang-col"><ul>
+<li>Use mature frameworks (Microsoft Autopilots, Vybe)</li>
+<li>Integrate security by design</li>
+<li>Engage with community (GitHub, arXiv)</li>
+<li>Experiment with multi-agent systems</li>
+</ul></div>
+</div>
+</div>
+</div>
+<div class="section-title">Glossaire — Glossary</div>
+<div class="glossary">
+<div class="glossary-header">
+<div class="glossary-term">Terme / Term</div>
+<div class="glossary-defs">
+<div class="glossary-def">Définition FR</div>
+<div class="glossary-def">Definition EN</div>
+</div>
+</div>
+<div class="glossary-row">
+<div class="glossary-term">Agent IA / AI Agent</div>
+<div class="glossary-defs">
+<div class="glossary-def">Système capable d'enchaîner des actions de bout en bout pour accomplir un objectif</div>
+<div class="glossary-def">System capable of chaining end-to-end actions to accomplish a goal</div>
+</div>
+</div>
+<div class="glossary-row">
+<div class="glossary-term">IA Agentique / Agentic AI</div>
+<div class="glossary-defs">
+<div class="glossary-def">Approche où l'IA agit de manière autonome avec un certain degré d'agency</div>
+<div class="glossary-def">Approach where AI acts autonomously with a degree of agency</div>
+</div>
+</div>
+<div class="glossary-row">
+<div class="glossary-term">Gouvernance Autonome</div>
+<div class="glossary-defs">
+<div class="glossary-def">Modules combinant IA explicable, pistes d'audit automatisées et surveillance de conformité</div>
+<div class="glossary-def">Modules combining explainable AI, automated audit trails, and compliance monitoring</div>
+</div>
+</div>
+<div class="glossary-row">
+<div class="glossary-term">Multi-Agent Coordination</div>
+<div class="glossary-defs">
+<div class="glossary-def">Collaboration entre plusieurs agents spécialisés pour accomplir des tâches complexes</div>
+<div class="glossary-def">Collaboration between multiple specialized agents to accomplish complex tasks</div>
+</div>
+</div>
+<div class="glossary-row">
+<div class="glossary-term">RAG</div>
+<div class="glossary-defs">
+<div class="glossary-def">Retrieval-Augmented Generation — technique améliorant la précision des modèles de langage</div>
+<div class="glossary-def">Retrieval-Augmented Generation — technique improving language model accuracy</div>
+</div>
+</div>
+<div class="glossary-row">
+<div class="glossary-term">Deepfake</div>
+<div class="glossary-defs">
+<div class="glossary-def">Contenu synthétique réaliste généré par IA</div>
+<div class="glossary-def">Realistic synthetic content generated by AI</div>
+</div>
+</div>
+</div>
+<div class="newspaper-footer">
+<p><strong>THE AI AGENTS TIMES</strong> —  Rapport Hebdomadaire | Weekly Report — 22 Juin 2026 | June 22, 2026</p>
+<p style="margin-top:8px;font-size:0.78rem;">Ce rapport est basé sur des recherches web effectuées entre le 15 et le 22 juin 2026. / This report is based on web searches conducted between June 15–22, 2026.</p>
+</div>
+</div></body>
+</html>
